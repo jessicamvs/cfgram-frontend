@@ -1,5 +1,5 @@
 'use strict';
-
+// tests
 describe('Auth Service', function() {
   beforeEach(() => {
     angular.mock.module('cfgram');
