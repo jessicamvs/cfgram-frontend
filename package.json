@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+  "node": "4.4.7"
+  },
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "webpack -p --progress",
