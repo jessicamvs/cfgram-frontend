@@ -1,9 +1,11 @@
-const express = require('express'),
-  port = process.env.PORT || 3000,
-  app = express();
+'use strict';
 
-app.use(express.static('build'));
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 8080;
 
-app.listen(port, function() {
-  console.log('server started on ' + port);
+app.use(express.static(`${__dirname}/build`));
+
+app.listen(PORT, function(){
+  console.log('server up:', PORT);
 });
