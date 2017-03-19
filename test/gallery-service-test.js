@@ -33,7 +33,7 @@ describe('Gallery Service', function() {
         'Authorization': `Bearer ${this.testToken}`
       };
 
-      this.$httpBackend.expectPOST('http://localhost:8000/api/gallery', galleryData, headers)
+      this.$httpBackend.expectPOST(`${__API_URL__}/api/gallery`, galleryData, headers)
       .respond(200);
 
       this.galleryService.createGallery(galleryData);
@@ -49,7 +49,7 @@ describe('Gallery Service', function() {
         'Accept': 'application/json'
       };
 
-      this.$httpBackend.expectGET('http://localhost:8000/api/gallery', headers)
+      this.$httpBackend.expectGET(`${__API_URL__}/api/gallery`, headers)
       .respond(200);
 
       this.galleryService.fetchGalleries();
@@ -89,7 +89,7 @@ describe('Gallery Service', function() {
         'Accept': 'application/json, text/plain, */*'
       };
 
-      this.$httpBackend.expectDELETE(`http://localhost:8000/api/gallery/${galleryID}`, headers)
+      this.$httpBackend.expectDELETE(`${__API_URL__}/api/gallery/${galleryID}`, headers)
       .respond(204);
 
       this.galleryService.deleteGallery(galleryID);
