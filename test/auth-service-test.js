@@ -61,7 +61,7 @@ describe('Auth Service', function() {
         'Accept': 'application/json'
       };
 
-      this.$httpBackend.expectPOST('http://localhost:8000/api/signup', testUser, headers)
+      this.$httpBackend.expectPOST(`${__API_URL__}/api/signup`, testUser, headers)
       .respond(200, {
         testUser
       });
